@@ -31,7 +31,7 @@ $*/
 #include <stdlib.h>
 #include <stdio.h>
 
-void do_op(char *op1, char *op2, char op){
+void do_op(char *op1, char op, char *op2){
 	int res = 0;
 	int a;
 	int b;
@@ -56,8 +56,8 @@ int main (int ac, char **av)
 	if (ac == 4)
 	{
 		if (av[2][1] == '\0')
-			do_op(av[1], av[3], *av[2]);
-			write(1, "\n", 1);
+			do_op(av[1], av[2][0], av[3]);
 	}
+	printf("\n");
 	return (0);
 }
